@@ -1,0 +1,65 @@
+.mainHeaderWrapper {
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 15px 0px;
+}
+
+.headerMenuIcons svg {
+    color: #fff;
+    font-size: 40px;
+}
+
+.MenuIcons {
+    background: radial-gradient(farthest-side at 10% 10%, #e6e6e6, #000, #000, #222);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s ease both;
+    transform-style: preserve-3d;
+}
+
+.MenuIcons svg {
+    transition: 20s ease both;
+}
+
+.headerMenuIcons {
+    display: flex;
+    justify-content: end;
+}
+.headerSlideClosed {
+    /* background: radial-gradient(farthest-side at 10% 10%, #000, #222, #000); */
+    background: linear-gradient(318deg, rgb(4 11 56) 0%, rgba(0,0,0,1) 64%);
+    width: 20%;
+    right: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.headerSlideShow {
+    transform: translateX(0%);
+    transition: all 1s ease;
+    visibility: visible;
+    opacity: 1;
+    width: 20%;
+    right: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-left: solid 1px #ffffff1c;
+    background: linear-gradient(318deg, rgb(4 11 56) 0%, rgba(0,0,0,1) 64%);
+}
