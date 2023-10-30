@@ -1,8 +1,8 @@
 import React from "react";
 import { Button, Col, Row } from "antd";
-import ThreeGlaxy from "../Utils/ThreeGlaxy";
-import SocialIcons from "../Templates/SocialIcons/SocialIcons";
-import CarModule from "../Templates/CarModule/CarModule";
+import CarModule from "../../Templates/CarModule/CarModule";
+import ThreeGalaxy from "../../Utils/ThreeGlaxy";
+import SocialIcons from "../../Templates/SocialIcons/SocialIcons";
 
 function Home() {
 
@@ -10,7 +10,7 @@ function Home() {
         <div className="Home pageWrapper">
                 <div className='castleWrapper'>
                     <CarModule />
-                    <ThreeGlaxy />
+                    <ThreeGalaxy />
                 </div>
             <div className="HomeSection">
                 <div className="container">

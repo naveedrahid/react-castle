@@ -3,14 +3,21 @@ import { Col, Image, Row } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEquals, faXmark } from '@fortawesome/free-solid-svg-icons'
 // import SideMenu from './SideMenu'
-import './Header.css'
 import { Link } from 'react-router-dom'
+import './Header.css'
+import SideMenu from './SideMenu'
+
 function Header() {
 
   const [showEquals, setShowEquals] = useState(true);
 
   const toggleIcon = () => {
     setShowEquals(prevState => !prevState);
+    const icons = document.querySelectorAll('.MenuIcons');
+
+    icons.forEach(icon => {
+      icon.classList.toggle('rotate');
+    });
   }
 
   return (
@@ -54,17 +61,10 @@ function Header() {
               <div
                 className='headerMenuIcons'
                 onClick={toggleIcon}
-              >{
-                  showEquals ? (
-                    <div className='MenuIcons'>
-                      <FontAwesomeIcon icon={faEquals} />
-                    </div>
-                  ) : (
-                    <div className='MenuIcons'>
-                      <FontAwesomeIcon icon={faXmark} />
-                    </div>
-                  )
-                }
+              >
+                <div className='MenuIcons'>
+                  <FontAwesomeIcon icon={showEquals ? faEquals : faXmark} />
+                </div>
               </div>
             </div>
           </Col>
@@ -73,18 +73,8 @@ function Header() {
       {/* {console.log(showEquals)} */}
       {/* <SideMenu  /> */}
       <div className={showEquals ? 'headerSlideClosed' : 'headerSlideShow'}>
-        <ul>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-        </ul>
-    </div>
+          <SideMenu />
+      </div>
     </div>
   )
 }

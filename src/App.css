@@ -1,9 +1,10 @@
-.HomeSection{
+.HomeSection {
   height: 100vh;
   background: #000;
   display: flex;
   align-items: flex-end;
 }
+
 .castleWrapper>div {
   position: absolute;
   width: 24%;
@@ -11,26 +12,31 @@
   left: 38%;
   z-index: 1;
 }
+
 .btnCenter {
   text-align: center;
 }
+
 .img-container:hover img {
   cursor: e-resize !important;
 }
+
 .btnCenter button {
   background: transparent;
   border: none;
   color: #fff;
 }
+
 .Home.pageWrapper {
   position: relative;
 }
+
 .carModule .img-container {
   border: 1px solid #ccc;
   width: 100%;
-  max-width:640px;
+  max-width: 640px;
   margin: 0 auto;
-  padding:0;
+  padding: 0;
   cursor: ew-resize;
 }
 
@@ -48,15 +54,16 @@
 }
 
 .carModule #preload-imgs {
-  display:none;
+  display: none;
 }
 
-.scale-animation{
+.scale-animation {
   transform: scale(4);
   transition: 5s ease;
   /* width: 100% !important;
   height: 100% !important; */
 }
+
 canvas#canvas {
   position: absolute;
   width: 42%;
@@ -69,11 +76,12 @@ canvas#canvas {
   margin: auto;
   transition: 5s ease;
 }
-.HomeSectionRow{
-  padding-bottom:70px;
+
+.HomeSectionRow {
+  padding-bottom: 70px;
 }
 
-.HomeSectionRow div{
+.HomeSectionRow div {
   color: #fff;
 }
 
@@ -111,10 +119,12 @@ canvas#canvas {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .container {
   width: 100%;
   margin-right: auto;
@@ -141,8 +151,18 @@ canvas#canvas {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .container {
-    max-width: 1650px;
+    max-width: 1140px;
+  }
+
+  .HomeSectionRow {
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1300px;
   }
 }

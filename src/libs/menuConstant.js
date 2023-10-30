@@ -1,4 +1,4 @@
 export const AuthenticatedRoutesConstant = {
     HOME:'/',
-    About:'/about',
+    ABOUT:'/about',
 }
