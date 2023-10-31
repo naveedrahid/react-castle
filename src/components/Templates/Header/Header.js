@@ -70,8 +70,6 @@ function Header() {
           </Col>
         </Row>
       </div>
-      {/* {console.log(showEquals)} */}
-      {/* <SideMenu  /> */}
       <div className={showEquals ? 'headerSlideClosed' : 'headerSlideShow'}>
           <SideMenu />
       </div>

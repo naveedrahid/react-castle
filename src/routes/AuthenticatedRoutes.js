@@ -10,7 +10,10 @@ function AuthenticatedRoutes() {
     <Routes>
         <Route element={<MasterLayout />}>
             <Route path={AuthenticatedRoutesConstant.HOME} element={<Home />} />
-            <Route path={AuthenticatedRoutesConstant.ABOUT} element={ <About /> } />
+              <Route 
+              path={AuthenticatedRoutesConstant.ABOUT} 
+              element={ <About /> } 
+              />
         </Route>
     </Routes>
   )

@@ -6,17 +6,19 @@ import './Header.css'
 function SideMenu() {
   return (
     <div className='menuSide'>
-        <ul>
-            <li><Link to={AuthenticatedRoutesConstant.HOME}>Home</Link></li>
-            <li><Link to={AuthenticatedRoutesConstant.ABOUT}>About Us</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-            <li><Link>Home</Link></li>
-        </ul>
+      <ul className='ginger'>
+        <li>
+          <Link
+            to={AuthenticatedRoutesConstant.HOME}>Home</Link>
+        </li>
+        <li>
+          <Link
+            to={AuthenticatedRoutesConstant.ABOUT}>About Us</Link>
+        </li>
+        <li>
+          <Link>Contact Us</Link>
+        </li>
+      </ul>
     </div>
   )
 }

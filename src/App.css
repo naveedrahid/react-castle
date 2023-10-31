@@ -1,20 +1,71 @@
+@font-face {
+  font-family: ginger;
+  src: url('./components/assets/fonts/ginger.woff');
+}
+
+.ginger h1,
+.ginger h2,
+.ginger h3,
+.ginger h4,
+.ginger h5,
+.ginger p,
+.ginger span,
+.ginger button,
+.ginger {
+  font-family: 'ginger', serif;
+}
+
+.btnEnter {
+  border: solid 2px #fff !important;
+  border-radius: 0;
+  padding: 30px 50px;
+  line-height: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.textMissing {
+  font-size: 30px;
+}
+
+.textMissing {
+  color: #fff !important;
+  font-weight: 300 !important;
+  font-size: 30px !important;
+  line-height: 30px !important;
+}
+
 .HomeSection {
   height: 100vh;
-  background: #000;
+  background: url('./components/assets/images/hombg.png') no-repeat center center / cover;
   display: flex;
   align-items: flex-end;
+  background-color: #000;
 }
 
 .castleWrapper>div {
   position: absolute;
-  width: 24%;
-  top: 19%;
-  left: 38%;
+  width: 50%;
+  top: -10%;
+  left: 25%;
   z-index: 1;
+  height: auto;
 }
 
 .btnCenter {
   text-align: center;
+}
+
+.img-container::before {
+  content: '';
+  background: url('./components/assets/images/base.png') no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 28%;
+  background-size: 100%;
+  bottom: 5%;
+  background-position: center center;
+  z-index: -1;
 }
 
 .img-container:hover img {
@@ -60,14 +111,20 @@
 .scale-animation {
   transform: scale(4);
   transition: 5s ease;
+  background-color: transparent !important;
   /* width: 100% !important;
   height: 100% !important; */
 }
 
+canvas {
+  background-color: transparent !important;
+}
+
 canvas#canvas {
   position: absolute;
-  width: 42%;
-  height: 79vh;
+  background-color: transparent !important;
+  width: 45%;
+  height: 70vh;
   border-radius: 100%;
   left: 0;
   right: 0;
@@ -75,6 +132,10 @@ canvas#canvas {
   bottom: 0;
   margin: auto;
   transition: 5s ease;
+}
+
+.socialWrapper {
+  text-align: right;
 }
 
 .HomeSectionRow {
@@ -163,6 +224,10 @@ canvas#canvas {
 
 @media (min-width: 1600px) {
   .container {
-    max-width: 1300px;
+    max-width: 1480px;
+  }
+
+  .HomeSectionRow {
+    padding-bottom: 50px;
   }
 }

@@ -10,6 +10,7 @@ function ThreeGalaxy() {
         const canvas = document.getElementById('canvas');
         const renderer = new THREE.WebGLRenderer({ canvas, preserveDrawingBuffer: true, alpha: true });
         renderer.autoClearColor = false; // For trails
+        renderer.setClearColor(0xd83030, 0);
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(90, canvas.width / canvas.height, 0.1, 1000);
         var vertices = [];
@@ -44,7 +45,7 @@ function ThreeGalaxy() {
         const fadeGeo = new THREE.PlaneGeometry(width, height);
 
         const fadeMat = new THREE.MeshBasicMaterial({
-            color: 0x000000,
+            color: 0x00000000,
             transparent: true,
             opacity: .4,
         });

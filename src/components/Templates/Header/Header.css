@@ -36,8 +36,7 @@
 }
 
 .headerSlideClosed {
-    /* background: radial-gradient(farthest-side at 10% 10%, #000, #222, #000); */
-    background: linear-gradient(318deg, rgb(4 11 56) 0%, rgba(0, 0, 0, 1) 64%);
+    background: linear-gradient(-45deg, rgba(4,15,88,1) 0%, rgba(0,0,0,1) 100%);
     width: 20%;
     right: 0;
     position: fixed;
@@ -80,10 +79,43 @@
 .headerSlideShow ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
+.headerSlideClosed,
 .headerSlideShow {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(-45deg, rgba(4,15,88,1) 0%, rgba(0,0,0,1) 100%);
+}
+.headerSlideClosed .menuSide ul li a ,
+.headerSlideShow .menuSide ul li a {
+    color:#ffffffd9;
+    font-size: 25px;
+    text-decoration: none;
+}
+.headerSlideClosed .menuSide ul li,
+.headerSlideShow .menuSide ul li {
+    text-align: center;
+    border-bottom: solid 1px #fff6;
+    margin: 20px 0px;
+    padding: 10px 0px;
+}
+.menuSide {
+    padding: 0px 30px;
+    width: 100%;
+}
+.btnCenter:before {
+    content: '';
+    background: url('../../assets/images/arrow.png') no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 72px;
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    bottom: 100%;
+    left: 0;
+    right: 0;
 }

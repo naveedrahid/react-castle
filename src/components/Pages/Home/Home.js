@@ -1,17 +1,19 @@
-import React from "react";
-import { Button, Col, Row } from "antd";
+import React, { useState } from "react";
+import { Button, Col, Row, Typography } from "antd";
 import CarModule from "../../Templates/CarModule/CarModule";
 import ThreeGalaxy from "../../Utils/ThreeGlaxy";
 import SocialIcons from "../../Templates/SocialIcons/SocialIcons";
+import { Link, useHistory } from 'react-router-dom';
+const { Title } = Typography;
 
 function Home() {
 
     return (
         <div className="Home pageWrapper">
-                <div className='castleWrapper'>
-                    <CarModule />
-                    <ThreeGalaxy />
-                </div>
+            <div className='castleWrapper'>
+                <CarModule />
+                <ThreeGalaxy />
+            </div>
             <div className="HomeSection">
                 <div className="container">
                     <Row
@@ -27,7 +29,12 @@ function Home() {
                                 span: 8,
                             }}
                         >
-                            WHAT IS MISSING?
+                            <Title
+                                className="ginger textMissing"
+                                level={3}
+                            >
+                                WHAT IS MISSING?
+                            </Title>
                         </Col>
                         <Col
                             span={8}
@@ -39,7 +46,9 @@ function Home() {
                             }}
                         >
                             <div className='btnCenter'>
-                                <Button>Enter</Button>
+                                <Button
+                                    className='ginger btnEnter'
+                                >enter in castle</Button>
                             </div>
                         </Col>
                         <Col
