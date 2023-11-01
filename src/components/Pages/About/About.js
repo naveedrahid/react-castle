@@ -1,34 +1,138 @@
-import React, { useState, useEffect } from 'react';
-import DatGuiStars from '../../Utils/DatGuiStars';
-import './About.css';
+import React, { useState, useEffect } from "react";
+import DatGuiStars from "../../Utils/DatGuiStars";
+import { Button, Col, Row } from "antd";
+import "./About.css";
+import SinWave from "../../Utils/SinWave";
 
 function About() {
-  // const [reloadKey, setReloadKey] = useState(0);
-  const [showAboutText, setShowAboutText] = useState(false);
 
-  // function reloadComponent() {
-  //   setReloadKey(true);
-  // }
+  const phrases = [
+    `We are witnessing the 6th mass extinction 
+    in the history of the planet.
+    By 2100 50% of all species may face extinction.
+    `,
+    "This is a typing effect.",
+    "You can change the phrases.",
+    "Customize it as you like!",
+  ];
+
+  const [showAboutText, setShowAboutText] = useState(false);
+  const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [currentChar, setCurrentChar] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowAboutText(true);
     }, 1500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
+  useEffect(() => {
+    let typingInterval;
+
+    if (showAboutText) {
+      typingInterval = setInterval(() => {
+        setCurrentChar((prev) => prev + 1);
+      }, 25);
+    }
+
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, [showAboutText]);
+
+  useEffect(() => {
+    if (currentChar === phrases[currentPhrase].length) {
+      setTimeout(() => {
+        setCurrentChar(0);
+        setCurrentPhrase((prev) => (prev + 1) % phrases.length);
+      }, 3000);
+    }
+  }, [currentChar, currentPhrase]);
+
+  const divElements = Array.from({ length: 22 }, (_, index) => (
+    <div key={index}></div>
+  ));
+
+
   return (
-    <>
+    <div className="AboutUsWrapper">
+      {showAboutText && (
+        <SinWave />
+      )}
       {showAboutText ? (
-        <div>
-          <h1>About Us</h1>
-          <p>This is the About Us page content.</p>
+        <div className="AboutUsInner">
+          <div className="abtIntrostart">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/EngW7tLk6R8?si=k1_jy1ilabX3wLlh"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+
+          </div>
+          <div className="aboutIntro">
+            <div className="container">
+              <Row
+                align='middle'
+              >
+                <Col
+                  span={16}
+                  sm={{
+                    span: 24,
+                  }}
+                  md={{
+                    span: 16,
+                  }}
+                  lg={{
+                    span: 16,
+                  }}
+                >
+                  <div className="abtTextTyping ginger">
+                    <h1 id="typing">
+                      {phrases[currentPhrase].slice(0, currentChar)}
+                    </h1>
+                  </div>
+                </Col>
+                <Col
+                  span={8}
+                  sm={{
+                    span: 24,
+                  }}
+                  md={{
+                    span: 8,
+                  }}
+                  lg={{
+                    span: 8,
+                  }}
+                >
+                  <div className="aboutIntroBtn">
+                    <Button className='ginger btnIntro'>Skip Intro</Button>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </div>
         </div>
       ) : (
-        <DatGuiStars/>
+        <DatGuiStars />
       )}
-    </>
+      {showAboutText && (
+        <div className="css_animation">
+          <div className="css_animationWrapper">
+            {
+              divElements
+            }
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -1,5 +1,332 @@
-#main_canvas{
-    background:#000 !important;
-    width: 100%;
-    height: 100%;
+#main_canvas {
+  background: #000 !important;
+  width: 100%;
+  height: 100%;
+}
+
+
+/** Layered Animation **/
+
+.layered-animations {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1100px;
+  height: 550px;
+  margin: -275px 0 0 -550px;
+}
+
+.layered-animations .shape {
+  position: absolute;
+  top: 50%;
+  overflow: visible;
+  width: 280px;
+  height: 280px;
+  margin-top: -140px;
+  stroke: transparent;
+  stroke-width: 1px;
+  fill: url(#shapesGradient);
+}
+
+
+
+.layered-animations .small.shape {
+  width: 64px;
+  height: 64px;
+  margin-top: -32px;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.layered-animations .x-small.shape {
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.AboutUsWrapper {
+  height: 100vh;
+  background: url('../../assets/images/hombg.png') no-repeat center center / cover;
+  background-color: #000;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.AboutUsInner {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.AboutUsInner .aboutIntro {
+  width: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.abtTextTyping h1 {
+  color: #fff;
+  margin: 0;
+  font-weight: 400;
+}
+
+.aboutIntroBtn {
+  text-align: right;
+}
+
+.abtIntrostart {
+  display: flex;
+  align-items: end;
+}
+
+.AboutUsInner .aboutIntro .ant-row {
+  padding-bottom: 50px;
+}
+
+.css_animation {
+  overflow: hidden;
+}
+
+.css_animation .css_animationWrapper {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.css_animation .css_animationWrapper div {
+  position: absolute;
+  margin-top: -17%;
+  height: 34%;
+  width: 2%;
+  border-radius: 20px 20px 0px 0px;
+  bottom: 0;
+  opacity: 0.4;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(1) {
+  animation: prop 17s 0.000s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(2) {
+  animation: prop 17s -16.227s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(3) {
+  animation: prop 17s -15.455s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(4) {
+  animation: prop 17s -14.682s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(5) {
+  animation: prop 17s -13.909s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(6) {
+  animation: prop 17s -13.136s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(7) {
+  animation: prop 17s -12.364s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(8) {
+  animation: prop 17s -11.591s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(9) {
+  animation: prop 17s -10.818s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(10) {
+  animation: prop 17s -10.045s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(11) {
+  animation: prop 17s -9.273s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(12) {
+  animation: prop 17s -8.500s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(13) {
+  animation: prop 17s -7.727s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(14) {
+  animation: prop 17s -6.955s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(15) {
+  animation: prop 17s -6.182s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(16) {
+  animation: prop 17s -5.409s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(17) {
+  animation: prop 17s -4.636s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(18) {
+  animation: prop 17s -3.864s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(19) {
+  animation: prop 17s -3.091s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(20) {
+  animation: prop 17s -2.318s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(21) {
+  animation: prop 17s -1.545s linear infinite;
+}
+
+.css_animation .css_animationWrapper div:nth-of-type(22) {
+  animation: prop 17s -0.773s linear infinite;
+}
+
+@keyframes prop {
+  0% {
+    background: #192558;
+    left: -2%;
+  }
+
+  5% {
+    background: #192558;
+  }
+
+  10% {
+    height: 10%;
+    margin-top: -5%;
+    background: #192558;
+  }
+
+  15% {
+    background: #192558;
+  }
+
+  20% {
+    height: 34%;
+    margin-top: -17%;
+    background: #192558;
+  }
+
+  25% {
+    background: #192558;
+  }
+
+  30% {
+    height: 10%;
+    margin-top: -5%;
+    background: #192558;
+  }
+
+  35% {
+    background: #192558;
+  }
+
+  40% {
+    height: 34%;
+    margin-top: -17%;
+    background: #192558;
+  }
+
+  45% {
+    background: #192558;
+  }
+
+  50% {
+    height: 10%;
+    margin-top: -5%;
+    background: #192558;
+  }
+
+  55% {
+    background: #192558;
+  }
+
+  60% {
+    height: 34%;
+    margin-top: -17%;
+    background: #192558;
+  }
+
+  65% {
+    background: #192558;
+  }
+
+  70% {
+    height: 10%;
+    margin-top: -5%;
+    background: #192558;
+  }
+
+  75% {
+    background: #192558;
+  }
+
+  80% {
+    height: 34%;
+    margin-top: -17%;
+    background: #192558;
+  }
+
+  85% {
+    background: #192558;
+  }
+
+  90% {
+    height: 10%;
+    margin-top: -5%;
+    background: #192558;
+  }
+
+  95% {
+    background: #192558;
+  }
+
+  100% {
+    left: 100%;
+    height: 34%;
+    margin-top: -17%;
+    background: #192558;
+  }
+}
+
+canvas#waves {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  right: 0;
+}
+
+
+@media (min-width: 740px) {
+  .layered-animations .shape {
+    stroke-width: .5px;
+  }
 }

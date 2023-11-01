@@ -9,14 +9,22 @@ function SideMenu() {
       <ul className='ginger'>
         <li>
           <Link
-            to={AuthenticatedRoutesConstant.HOME}>Home</Link>
+            to={AuthenticatedRoutesConstant.HOME}>
+            Home
+          </Link>
         </li>
         <li>
           <Link
-            to={AuthenticatedRoutesConstant.ABOUT}>About Us</Link>
+            to={AuthenticatedRoutesConstant.ABOUT}>
+            About Us
+          </Link>
         </li>
         <li>
-          <Link>Contact Us</Link>
+          <Link
+            to={AuthenticatedRoutesConstant.MUSIC_CAT}
+          >
+            Category
+          </Link>
         </li>
       </ul>
     </div>
