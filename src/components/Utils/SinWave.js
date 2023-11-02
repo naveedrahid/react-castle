@@ -33,7 +33,7 @@ function SinWave() {
         SineWaveGenerator.prototype.segmentLength = 10;
 
         SineWaveGenerator.prototype.lineWidth = 2;
-        SineWaveGenerator.prototype.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+        SineWaveGenerator.prototype.strokeStyle = 'rgba(229, 217, 71)';
 
         SineWaveGenerator.prototype.resizeEvent = function () { };
 
@@ -189,7 +189,7 @@ function SinWave() {
             resizeEvent: function () {
                 var gradient = this.ctx.createLinearGradient(0, 0, this.width, 0);
                 gradient.addColorStop(0, "rgba(0, 0, 0, 0)");
-                gradient.addColorStop(0.5, "rgba(255, 255, 255, 0.5)");
+                gradient.addColorStop(0.5, "rgba(229, 217, 71, 0.80)");
                 gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
                 var index = -1;

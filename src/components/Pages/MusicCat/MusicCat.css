@@ -1,23 +1,32 @@
 .MusicCategoryWrapper {
     position: relative;
     height: 100vh;
+    overflow: hidden;
     background: #000 url('../../assets/images/hombg.png') no-repeat center center / cover;
 }
 
 .animation-wrapper {
     width: 40%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 80%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.sphere-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .categoryMusic .categoryMusicInner {
     position: absolute;
-    z-index: 9;
+    z-index: 1;
+    transition: 0.3s ease;
 }
 
 .categoryMusic .album1 {
@@ -31,7 +40,7 @@
     text-align: center;
 }
 
-.album1 .ant-image:before {
+.album1 .antImage:before {
     content: '';
     width: 100px;
     height: 1px;
@@ -42,13 +51,7 @@
     z-index: -1;
 }
 
-.album1 .ant-image::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff;
-    position: absolute;
-    border-radius: 100%;
+.album1 .antImage::after {
     left: -120px;
     top: 33px;
 }
@@ -58,18 +61,12 @@
     top: 23%;
 }
 
-.album2 .ant-image::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff;
-    position: absolute;
-    border-radius: 100%;
+.album2 .antImage::after {
     left: -214px;
     top: 92px;
 }
 
-.album2 .ant-image::before {
+.album2 .antImage::before {
     content: '';
     background: url('../../assets/images/shap1.png') no-repeat;
     background-size: contain;
@@ -86,7 +83,7 @@
     top: 39%;
 }
 
-.album3 .ant-image::before {
+.album3 .antImage::before {
     content: '';
     background: url('../../assets/images/shap2.png') no-repeat;
     background-size: contain;
@@ -98,13 +95,7 @@
     z-index: -1;
 }
 
-.album3 .ant-image::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff;
-    position: absolute;
-    border-radius: 100%;
+.album3 .antImage::after {
     left: -218px;
     top: 81px;
 }
@@ -114,7 +105,7 @@
     top: 55%;
 }
 
-.album4 .ant-image:before {
+.album4 .antImage:before {
     content: '';
     width: 100px;
     height: 1px;
@@ -125,13 +116,7 @@
     z-index: -1;
 }
 
-.album4 .ant-image::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff;
-    position: absolute;
-    border-radius: 100%;
+.album4 .antImage::after {
     left: -120px;
     top: 33px;
 }
@@ -141,7 +126,7 @@
     top: 70%;
 }
 
-.album5 .ant-image::before {
+.album5 .antImage::before {
     content: '';
     background: url('../../assets/images/shap3.png') no-repeat;
     background-size: contain;
@@ -152,13 +137,7 @@
     top: 56px;
 }
 
-.album5 .ant-image::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff;
-    position: absolute;
-    border-radius: 100%;
+.album5 .antImage::after {
     left: -298px;
     top: 78px;
 }
@@ -168,7 +147,7 @@
     top: 21%;
 }
 
-.album6 .ant-image::before {
+.album6 .antImage::before {
     content: '';
     width: 255px;
     height: 1px;
@@ -179,13 +158,7 @@
     z-index: -1;
 }
 
-.album6 .ant-image::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border: solid 1px #fff;
-    position: absolute;
-    border-radius: 100%;
+.album6 .antImage::after {
     right: -280px;
     top: 42px;
 }
@@ -195,7 +168,7 @@
     top: 36%;
 }
 
-.album7 .ant-image::before {
+.album7 .antImage::before {
     content: '';
     width: 120px;
     height: 1px;
@@ -206,13 +179,431 @@
     z-index: -1;
 }
 
-.album7 .ant-image::after {
+.album7 .antImage::after {
+    right: -148px;
+    top: 42px;
+}
+
+.categoryMusicInner.album8 {
+    left: 9%;
+    top: 52%;
+}
+
+.album8 .antImage::before {
+    content: '';
+    width: 316px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    right: -305px;
+    top: 51px;
+    z-index: -1;
+}
+
+.album8 .antImage::after {
+    right: -338px;
+    top: 42px;
+}
+
+.categoryMusicInner.album9 {
+    left: 23%;
+    top: 64%;
+}
+
+.album9 .antImage::before {
+    content: '';
+    width: 95px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    right: -85px;
+    top: 51px;
+    z-index: -1;
+}
+
+.album9 .antImage::after {
+    right: -115px;
+    top: 42px;
+}
+
+.categoryMusicInner.album10 {
+    left: 7%;
+    bottom: 15%;
+}
+
+.album10 .antImage::before {
+    content: '';
+    background: url('../../assets/images/Shap4.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 480px;
+    height: 46px;
+    left: 68px;
+    top: 41px;
+    z-index: -1;
+}
+
+.album10 .antImage::after {
+    left: 562px;
+    top: 31px;
+}
+
+.categoryMusicInner .antImage::after {
     content: '';
     width: 20px;
     height: 20px;
     border: solid 1px #fff;
     position: absolute;
     border-radius: 100%;
-    right: -148px;
-    top: 42px;
+}
+
+.doorImage {
+    background: url('../../assets/images/door.png') no-repeat center center / contain;
+    width: 80px;
+    height: 74px;
+    visibility: visible;
+    transition: 0.3s ease;
+    opacity: 1;
+    display: block;
+}
+
+.categoryMusicInner:hover .doorImage {
+    transition: 0.3s ease;
+    background: url('../../assets/images/door-open.png') no-repeat center center / contain;
+}
+
+.animation-wrapper .ant-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+    margin: auto;
+}
+
+
+/* RESPONSIVE CSS */
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    .aboutIntroBtn button svg {
+        padding-left: 15px;
+    }
+
+    .animation-wrapper .ant-image img {
+        height: unset !important;
+    }
+
+    .animation-wrapper .ant-image {
+        width: 400px !important;
+        height: 400px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .animation-wrapper {
+      height: 60% !important;
+      width: 60% !important;
+    } */
+
+    .categoryMusic .categoryMusicInner:nth-child(n):nth-child(-n+5) {
+        right: 3%;
+    }
+
+    .categoryMusic .categoryMusicInner:nth-child(n):not(:nth-child(-n+5)) {
+        left: 3%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album5 {
+        top: 84%;
+        right: 9% !important;
+    }
+
+    .categoryMusicInner.album4 {
+        top: 60%;
+    }
+
+    .categoryMusicInner.album3 {
+        top: 44%;
+    }
+
+    .categoryMusicInner.album2 {
+        top: 29%;
+    }
+
+    .album2 .antImage::before,
+    .album3 .antImage::before,
+    .album4 .antImage::before {
+        width: 81px !important;
+        left: -69px !important;
+        background: #fff !important;
+        height: 1px !important;
+    }
+
+    .album2 .antImage::after,
+    .album3 .antImage::after,
+    .album4 .antImage::after {
+        left: -103px !important;
+        top: 47px !important;
+    }
+
+    .categoryMusic .categoryMusicInner.album4 .antImage::after {
+        top: 31px !important;
+    }
+
+    .categoryMusic .categoryMusicInner.album5 .antImage::after {
+        left: -114px;
+        top: 47px;
+    }
+
+    .categoryMusic .categoryMusicInner.album5 .antImage::before {
+        width: 110px;
+        left: -78px;
+        top: 56px;
+        z-index: -1;
+        background: #fff;
+        height: 1px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album6 {
+        left: 12%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 {
+        left: 10%;
+        bottom: 10%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album7 .antImage::before,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album8 .antImage::before,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album9 .antImage::before {
+        width: 80px;
+        left: 72px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album7 .antImage::after,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album8 .antImage::after,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album9 .antImage::after {
+        left: 162px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album8 {
+        top: 50%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album6 .antImage::before {
+        width: 65px;
+        left: 71px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album6 .antImage::after {
+        left: 145px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::before {
+        width: 84px;
+        background: #fff;
+        height: 1px;
+        bottom: 37px;
+        top: unset;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::after {
+        left: 167px;
+        top: 47px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::before {
+        width: 84px;
+        background: #fff;
+        height: 1px;
+        bottom: 37px;
+        top: unset;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::after {
+        left: 167px;
+        top: 47px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album4 {
+        top: 69%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album3 {
+        top: 53%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album2 {
+        top: 38%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album1 {
+        top: 24%;
+        right: 14%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .animation-wrapper .ant-image {
+        width: 500px !important;
+        height: 500px !important;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+    .categoryMusic .categoryMusicInner:nth-child(n):nth-child(-n+5) {
+        right: 3%;
+    }
+
+    .categoryMusic .categoryMusicInner:nth-child(n):not(:nth-child(-n+5)) {
+        left: 3%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album5 {
+        top: 84%;
+        right: 9% !important;
+    }
+
+    .categoryMusicInner.album4 {
+        top: 60%;
+    }
+
+    .categoryMusicInner.album3 {
+        top: 44%;
+    }
+
+    .categoryMusicInner.album2 {
+        top: 29%;
+    }
+
+    .album2 .antImage::before,
+    .album3 .antImage::before,
+    .album4 .antImage::before {
+        width: 81px !important;
+        left: -69px !important;
+        background: #fff !important;
+        height: 1px !important;
+    }
+
+    .album2 .antImage::after,
+    .album3 .antImage::after,
+    .album4 .antImage::after {
+        left: -103px !important;
+        top: 47px !important;
+    }
+
+    .categoryMusic .categoryMusicInner.album4 .antImage::after {
+        top: 31px !important;
+    }
+
+    .categoryMusic .categoryMusicInner.album5 .antImage::after {
+        left: -114px;
+        top: 47px;
+    }
+
+    .categoryMusic .categoryMusicInner.album5 .antImage::before {
+        width: 110px;
+        left: -78px;
+        top: 56px;
+        z-index: -1;
+        background: #fff;
+        height: 1px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album6 {
+        left: 12%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 {
+        left: 10%;
+        bottom: 10%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album7 .antImage::before,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album8 .antImage::before,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album9 .antImage::before {
+        width: 80px;
+        left: 72px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album7 .antImage::after,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album8 .antImage::after,
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album9 .antImage::after {
+        left: 162px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album8 {
+        top: 50%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album6 .antImage::before {
+        width: 65px;
+        left: 71px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album6 .antImage::after {
+        left: 145px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::before {
+        width: 84px;
+        background: #fff;
+        height: 1px;
+        bottom: 37px;
+        top: unset;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::after {
+        left: 167px;
+        top: 47px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::before {
+        width: 84px;
+        background: #fff;
+        height: 1px;
+        bottom: 37px;
+        top: unset;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album10 .antImage::after {
+        left: 167px;
+        top: 47px;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album4 {
+        top: 69%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album3 {
+        top: 53%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album2 {
+        top: 38%;
+    }
+
+    .MusicCategoryWrapper .categoryMusic .categoryMusicInner.album1 {
+        top: 24%;
+        right: 9%;
+    }
+
+    .animation-wrapper {
+        width: 60%;
+    }
+
+    .MusicCategoryWrapper .animation-wrapper .ant-image img {
+        width: 700px !important;
+        height: 700px !important;
+    }
+    .animation-wrapper .ant-image{
+        width: unset !important;
+        height: unset !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

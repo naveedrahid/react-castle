@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Col, Row, Typography } from "antd";
 import CarModule from "../../Templates/CarModule/CarModule";
 import ThreeGalaxy from "../../Utils/ThreeGlaxy";
 import SocialIcons from "../../Templates/SocialIcons/SocialIcons";
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { AuthenticatedRoutesConstant } from "../../../libs/menuConstant";
 const { Title } = Typography;
 
 function Home() {
@@ -48,7 +49,9 @@ function Home() {
                             <div className='btnCenter'>
                                 <Button
                                     className='ginger btnEnter'
-                                >enter in castle</Button>
+                                >
+                                    <Link to={AuthenticatedRoutesConstant.ABOUT}>enter in castle</Link>
+                                </Button>
                             </div>
                         </Col>
                         <Col

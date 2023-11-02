@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, Typography } from 'antd';
+import { Link } from 'react-router-dom';
 import WorldAnimation from '../../Utils/WorldAnimation'
+import DatGuiStars from '../../Utils/DatGuiStars';
 import './MusicCat.css'
 
 const { Text } = Typography;
 
-
 function MusicCat() {
+
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [showCategoryPage, setShowCategoryPage] = useState(false);
 
     const categoryList = [
         {
@@ -51,26 +55,60 @@ function MusicCat() {
         },
     ];
 
-    const titles = categoryList.map(category => category.title);
+    const categories = categoryList.map(category => category);
+
+    const handleToggleClass = (index) => {
+        setActiveIndex(index === activeIndex ? null : index);
+    }
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowCategoryPage(true);
+        }, 1500);
+
+        return () => {
+            clearTimeout(timer);
+        };
+    }, []);
+
 
     return (
         <div className='MusicCategoryWrapper'>
-            <WorldAnimation />
-            <div className='categoryMusic'>
-                {
-                    titles.map((title, index) => (
-                        <div className={`categoryMusicInner album${index + 1}`} key={index}>
+            {
+                showCategoryPage ? (
+                    <>
+                        <div className="animation-wrapper">
+                            <WorldAnimation />
                             <Image
                                 preview={false}
-                                src={require('../../assets/images/door.png')}  // Use require directly here
+                                src={require('../../assets/images/albumcircle.png')}  // Use require directly here
                                 alt=''
-                                width={80}
+                                width={500}
+                                height={500}
+                                className='albumImageThumb'
                             />
-                            <Text>{title}</Text>
                         </div>
-                    ))
-                }
-            </div>
+                        <div className='categoryMusic'>
+                            {
+                                categories.map((category, index) => (
+                                    <div className={`categoryMusicInner album${index + 1} ${activeIndex === index ? 'Albumactive' : ''}`} key={index}>
+                                        <div className='antImage'>
+                                            <Link
+                                                onMouseEnter={() => handleToggleClass(index)}
+                                                onMouseLeave={() => handleToggleClass(index)}
+                                                className={activeIndex === index ? 'doorImage active' : 'doorImage'}
+                                            >
+                                            </Link>
+                                            <Text>{category.title}</Text>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </>
+                ) : (
+                    <DatGuiStars />
+                )}
         </div>
     )
 }

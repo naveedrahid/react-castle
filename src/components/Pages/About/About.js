@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import DatGuiStars from "../../Utils/DatGuiStars";
 import { Button, Col, Row } from "antd";
-import "./About.css";
 import SinWave from "../../Utils/SinWave";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./About.css";
+import { Link } from "react-router-dom";
+import { AuthenticatedRoutesConstant } from "../../../libs/menuConstant";
 
 function About() {
 
@@ -69,7 +73,7 @@ function About() {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/EngW7tLk6R8?si=k1_jy1ilabX3wLlh"
+              src="https://www.youtube.com/embed/dzIYgzQlNCU?si=e9SBBS-UovapcWwl"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -113,7 +117,11 @@ function About() {
                   }}
                 >
                   <div className="aboutIntroBtn">
-                    <Button className='ginger btnIntro'>Skip Intro</Button>
+                    <Button className='ginger btnIntro'>
+                      <Link to={AuthenticatedRoutesConstant.MUSIC_CAT}>
+                        Skip Intro <FontAwesomeIcon icon={faChevronRight} />
+                      </Link>
+                    </Button>
                   </div>
                 </Col>
               </Row>

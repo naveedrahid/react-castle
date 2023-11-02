@@ -106,16 +106,3 @@
     padding: 0px 30px;
     width: 100%;
 }
-.btnCenter:before {
-    content: '';
-    background: url('../../assets/images/arrow.png') no-repeat;
-    background-size: contain;
-    width: 30px;
-    height: 72px;
-    position: absolute;
-    z-index: 1;
-    margin: auto;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-}
