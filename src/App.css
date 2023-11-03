@@ -15,6 +15,138 @@
   font-family: 'ginger', serif;
 }
 
+body {
+  cursor: none;
+}
+
+.muzieknootjes {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+  height: 200px;
+  border: 0px solid #000;
+}
+
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4 {
+  position: absolute;
+  animation: notes 2s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+  color: #fbcf35;
+}
+
+.noot-1 {
+  bottom: 60px;
+  left: 0;
+  animation-delay: 0.5s;
+}
+
+.noot-2 {
+  bottom: 30px;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.noot-3 {
+  bottom: 90px;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.noot-4 {
+  bottom: 40px;
+  left: 90%;
+  animation-delay: 2s;
+}
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+
+
+.muzieknootjesMain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.muzieknootjes {
+    width: 100%;
+    height: calc(100vh / 3);
+}
+
+.muzieknootjes div {
+    opacity: 0.3;
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 2px solid #fad548;
+  transition: 0.3s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.cursor2 {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.grow,
+.grow-small {
+  transform: scale(4);
+  background: white;
+  mix-blend-mode: difference;
+  border: none;
+}
+
+.grow-small {
+  transform: scale(2);
+}
+
+.HomeSectionRow {
+  z-index: 1;
+  position: relative;
+}
+
 .btnEnter {
   border: solid 2px #fff !important;
   border-radius: 0;
@@ -79,6 +211,11 @@
   color: #fff;
 }
 
+.menuSide ul li {
+  position: relative;
+}
+
+.menuSide ul li:before,
 .btnCenter button:before {
   background: #1b2961;
   content: "";
@@ -92,6 +229,7 @@
   height: 100%;
 }
 
+.menuSide ul li:hover:before,
 .btnCenter button:hover:before {
   width: 100%;
 }
@@ -194,6 +332,19 @@ canvas#canvas {
 
 
 
+/* @keyframes move {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 85%;
+  }
+
+  100% {
+    left: 0;
+  }
+} */
 
 @keyframes moveUpDown {
 

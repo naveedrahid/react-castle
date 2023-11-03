@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEquals, faXmark } from '@fortawesome/free-solid-svg-icons'
 // import SideMenu from './SideMenu'
 import { Link } from 'react-router-dom'
-import './Header.css'
 import SideMenu from './SideMenu'
+import { AuthenticatedRoutesConstant } from '../../../libs/menuConstant'
+import './Header.css'
 
 function Header() {
 
@@ -37,12 +38,14 @@ function Header() {
             }}
           >
             <div className='headerLogo'>
-              <Image
-                preview={false}
-                src={process.env.PUBLIC_URL + '/logo.png'}
-                alt=''
-                width={200}
-              />
+              <Link to={AuthenticatedRoutesConstant.HOME}>
+                <Image
+                  preview={false}
+                  src={process.env.PUBLIC_URL + '/logo.png'}
+                  alt=''
+                  width={200}
+                />
+              </Link>
             </div>
           </Col>
           <Col

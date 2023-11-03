@@ -16,6 +16,50 @@ function Home() {
                 <ThreeGalaxy />
             </div>
             <div className="HomeSection">
+                <div className="muzieknootjesMain">
+                    <div className="muzieknootjes one">
+                        <div className="noot-1">
+                            ♫ ♩
+                        </div>
+                        <div className="noot-2">
+                            ♩
+                        </div>
+                        <div className="noot-3">
+                            ♯ ♪
+                        </div>
+                        <div className="noot-4">
+                            ♪
+                        </div>
+                    </div>
+                    <div className="muzieknootjes two">
+                        <div className="noot-1">
+                            ♫ ♩
+                        </div>
+                        <div className="noot-2">
+                            ♩
+                        </div>
+                        <div className="noot-3">
+                            ♯ ♪
+                        </div>
+                        <div className="noot-4">
+                            ♪
+                        </div>
+                    </div>
+                    <div className="muzieknootjes three">
+                        <div className="noot-1">
+                            ♫ ♩
+                        </div>
+                        <div className="noot-2">
+                            ♩
+                        </div>
+                        <div className="noot-3">
+                            ♯ ♪
+                        </div>
+                        <div className="noot-4">
+                            ♪
+                        </div>
+                    </div>
+                </div>
                 <div className="container">
                     <Row
                         align='middle'
@@ -31,7 +75,7 @@ function Home() {
                             }}
                         >
                             <Title
-                                className="ginger textMissing"
+                                className="ginger textMissing cursor-scale"
                                 level={3}
                             >
                                 WHAT IS MISSING?
@@ -48,7 +92,7 @@ function Home() {
                         >
                             <div className='btnCenter'>
                                 <Button
-                                    className='ginger btnEnter'
+                                    className='ginger btnEnter cursor-scale'
                                 >
                                     <Link to={AuthenticatedRoutesConstant.ABOUT}>enter in castle</Link>
                                 </Button>

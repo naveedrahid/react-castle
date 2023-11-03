@@ -92,14 +92,14 @@ function MusicCat() {
                             {
                                 categories.map((category, index) => (
                                     <div className={`categoryMusicInner album${index + 1} ${activeIndex === index ? 'Albumactive' : ''}`} key={index}>
-                                        <div className='antImage'>
+                                        <div className='antImage ginger'>
                                             <Link
                                                 onMouseEnter={() => handleToggleClass(index)}
                                                 onMouseLeave={() => handleToggleClass(index)}
                                                 className={activeIndex === index ? 'doorImage active' : 'doorImage'}
                                             >
                                             </Link>
-                                            <Text>{category.title}</Text>
+                                            <Text className='cursor-scale small'>{category.title}</Text>
                                         </div>
                                     </div>
                                 ))

@@ -5,8 +5,8 @@ import { Outlet } from 'react-router-dom'
 function MasterLayout() {
   return (
     <div className='mainpageWrapper'>
-    <Header />
-    <Outlet />
+      <Header />
+      <Outlet />
     </div>
   )
 }

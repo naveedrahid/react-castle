@@ -98,7 +98,7 @@ function About() {
                     span: 16,
                   }}
                 >
-                  <div className="abtTextTyping ginger">
+                  <div className="abtTextTyping ginger cursor-scale">
                     <h1 id="typing">
                       {phrases[currentPhrase].slice(0, currentChar)}
                     </h1>
@@ -117,7 +117,7 @@ function About() {
                   }}
                 >
                   <div className="aboutIntroBtn">
-                    <Button className='ginger btnIntro'>
+                    <Button className='ginger btnIntro cursor-scale'>
                       <Link to={AuthenticatedRoutesConstant.MUSIC_CAT}>
                         Skip Intro <FontAwesomeIcon icon={faChevronRight} />
                       </Link>

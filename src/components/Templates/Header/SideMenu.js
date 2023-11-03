@@ -6,20 +6,26 @@ import './Header.css'
 function SideMenu() {
   return (
     <div className='menuSide'>
-      <ul className='ginger'>
-        <li>
+      <ul className='ginger cursor-scale small'>
+        <li
+          className=''
+        >
           <Link
             to={AuthenticatedRoutesConstant.HOME}>
             Home
           </Link>
         </li>
-        <li>
+        <li
+          className=''
+        >
           <Link
             to={AuthenticatedRoutesConstant.ABOUT}>
             About Us
           </Link>
         </li>
-        <li>
+        <li
+          className=''
+        >
           <Link
             to={AuthenticatedRoutesConstant.MUSIC_CAT}
           >
